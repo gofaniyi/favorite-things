@@ -5,6 +5,8 @@ from flask import Flask, jsonify
 from flask_migrate import Migrate
 from flask_restplus import Api
 from flask_cors import CORS
+from flask_s3 import FlaskS3
+from flask_jsglue import JSGlue
 
 from api import api_blueprint
 from exception import exception_blueprint
@@ -13,6 +15,9 @@ from config import config, AppConfig
 from api.database import db
 
 api = Api(api_blueprint, doc=False)
+
+s3 = FlaskS3()
+jsglue = JSGlue()
 
 def initialize_errorhandlers(application):
     ''' Initialize error handlers '''
@@ -39,6 +44,10 @@ def create_app(config=AppConfig):
 
     # bind app to db
     db.init_app(app)
+
+    s3.init_app(app)
+
+    jsglue.init_app(app)
 
     import api.views
 
