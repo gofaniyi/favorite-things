@@ -1,8 +1,8 @@
 ## Insurance APP
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/ddb10332ab0cce466344/maintainability)](https://codeclimate.com/github/gofaniyi/insurance-api/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/ddb10332ab0cce466344/test_coverage)](https://codeclimate.com/github/gofaniyi/insurance-api/test_coverage)
-[![Build Status](https://travis-ci.org/gofaniyi/insurance-app.svg?branch=master)](https://travis-ci.org/azu/travis-badge)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7513939bf4da89be4919/maintainability)](https://codeclimate.com/github/gofaniyi/favorite-things/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/7513939bf4da89be4919/test_coverage)](https://codeclimate.com/github/gofaniyi/favorite-things/test_coverage)
+[![Build Status](https://travis-ci.org/gofaniyi/favorite-things.svg?branch=master)](https://travis-ci.org/azu/travis-badge)
 
 An assessement to solve the problems of managing different forms of Insurance
 
