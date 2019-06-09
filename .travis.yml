@@ -1,0 +1,30 @@
+language: python
+
+python:
+  - "3.6"
+
+services:
+  - postgresql
+
+before_script:
+  - psql -c 'create database britecore_test;' -U postgres
+  - mkdir -p tmp/
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > /tmp/cc-test-reporter
+  - chmod +x /tmp/cc-test-reporter 
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter.bin
+
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+
+# command to run tests
+script:
+  - pytest --cov=api/ tests --cov-report xml
+  - /tmp/cc-test-reporter format-coverage coverage.xml -t "coverage.py" -o "tmp/cc.testreport.json"
+
+# Pipe the coverage data to Code Climate
+after_success:
+  - /tmp/cc-test-reporter upload-coverage -i tmp/cc.testreport.json
+
+after_script:
+  - zappa update dev

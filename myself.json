@@ -1,0 +1,248 @@
+{
+    "personal_details": {
+        "firstName": "Olaoluwa",
+        "lastName": "Faniyi",
+        "middleName": "Gideon",
+        "email": "gofaniyi@gmail.com",
+        "phone": "+2347035795402",
+        "currentJobTitle": "Technical Team Lead/Senior Software Engineer",
+        "country": "Nigeria",
+        "city": "Lagos",
+        "address": "31 Folarin street, Magodo Phase 1, Isheri, Lagos",
+        "lifeGoals": [
+            "Build world-class solutions that has paying customers",
+            "Mentor and coach many young and aspiring software engineers",
+            "Work with great and brilliant minds all around the world",
+            "Contribute to solving challenges in the education section in Nigeria",
+            "Contribute immensenly to open source community"
+        ]
+    },
+    "work_history": [
+        {
+            "jobTitle": "Technical Team Lead",
+            "employer": "Andela",
+            "startDate": "October, 2018",
+            "endDate": null,
+            "isCurrent": true,
+            "projects/achievements": [
+                {
+                    "title": "Asset Management APIs",
+                    "description": "This project was built with Python/Flask and its deployed to serve the company's centers around the world.",
+                    "role": "Lead Engineer",
+                    "teamSize": 16,
+                    "technologies" : [
+                        "Python",
+                        "Flask",
+                        "PostgreSQL",
+                        "Redis",
+                        "Docker",
+                        "Celery",
+                        "Dramatiq",
+                        "Google Cloud Platform",
+                        "SQLAlchemy",
+                        "CircleCI",
+                        "Git"
+                    ]
+                },
+                {
+                    "title": "Asset Management Web",
+                    "description": "This project was built with Javascript/React and its deployed to serve the company's centers around the world.",
+                    "role": "Lead Engineer",
+                    "teamSize": 16,
+                    "technologies" : [
+                        "Javascript",
+                        "React",
+                        "TypeScript",
+                        "Redux",
+                        "Docker",
+                        "Google Cloud Platform",
+                        "NodeJs",
+                        "CircleCI",
+                        "WebPack",
+                        "Jest",
+                        "Cypress",
+                        "Git"
+                    ]
+                },
+                {
+                    "title": "Hotdesks Allocation Slack Bot",
+                    "description": "This project was built with Python/Flask and its deployed to serve the company's centers around the world.",
+                    "role": "Lead Engineer",
+                    "teamSize": 12,
+                    "technologies" : [
+                        "Python",
+                        "Flask",
+                        "PostgreSQL",
+                        "Redis",
+                        "Docker",
+                        "Dramatiq",
+                        "Google Cloud Platform",
+                        "SQLAlchemy",
+                        "CircleCI",
+                        "Git"
+                    ]
+                }
+            ] 
+        },
+        {
+            "jobTitle": "Senior Software Developer",
+            "employer": "Tuteria",
+            "startDate": "August, 2017",
+            "endDate": "July, 2018",
+            "isCurrent": false,
+            "achievements": [
+                {
+                    "title": "www.tuteria.com",
+                    "description": "Maintained and implemented new features on company's product website",
+                    "role": "Implementation Engineer",
+                    "teamSize": 9,
+                    "technologies" : [
+                        "Python",
+                        "Django",
+                        "PostgreSQL",
+                        "Redis",
+                        "Docker",
+                        "VPS - DigitalOcean",
+                        "Git",
+                        "Gitlab CI",
+                        "HTML5",
+                        "CSS3",
+                        "Javascript",
+                        "JQuery",
+                        "React"
+                    ]
+                }
+            ]
+        },
+        {
+            "jobTitle": "Senior Software Engineer",
+            "employer": "Precurio Software",
+            "startDate": "August, 2015",
+            "endDate": "July, 2017",
+            "isCurrent": false,
+            "achievements": [
+                {
+                    "title": "Seegad",
+                    "description": "Business visibility tool for professional service providers",
+                    "role": "Lead Developer",
+                    "teamSize": 5,
+                    "technologies" : [
+                        "Python",
+                        "Django",
+                        "MySQL",
+                        "Docker",
+                        "VPS - DigitalOcean",
+                        "Git",
+                        "HTML5",
+                        "CSS3",
+                        "Javascript",
+                        "JQuery"
+                    ]
+                }
+            ]
+        },
+        {
+            "jobTitle": "Junior Software Developer",
+            "employer": "Precise Financial Systems",
+            "startDate": "August, 2017",
+            "endDate": "July, 2015",
+            "isCurrent": false,
+            "achievements": [
+                {
+                    "title": "Payments Web Services",
+                    "description": "This project was built with Python/Flask and its deployed to serve the company's centers around the world.",
+                    "role": "Developer",
+                    "teamSize": 8,
+                    "technologies" : [
+                        "C#",
+                        ".Net 3.5 Framework",
+                        "XML",
+                        "SOAP",
+                        "ASP.Net"
+                    ]
+                },
+                {
+                    "title": "ATM Cash Load (MainStreet Bank)",
+                    "description": "Developed a portal for logging ATM (Automated Teller Machine) money administration",
+                    "role": "Developer",
+                    "teamSize": 5,
+                    "technologies" : [
+                        "C#",
+                        ".Net 3.5 Framework",
+                        "XML",
+                        "SOAP",
+                        "HTML5",
+                        "CSS3",
+                        "MSSQL",
+                        "Javascript",
+                        "JQuery"
+                    ]
+                },
+                {
+                    "title": "One Time Password (OTP)/ Two-Factor Authentication​",
+                    "description": "Developed a security interface for two (2) of the Payments System using the ESET OTP/2FA SDK.",
+                    "role": "Developer",
+                    "teamSize": 5,
+                    "technologies" : [
+                        "C#",
+                        ".Net 3.5 Framework",
+                        "XML",
+                        "SOAP",
+                        "HTML5",
+                        "CSS3",
+                        "MSSQL",
+                        "Javascript",
+                        "JQuery"
+                    ]
+                },
+                {
+                    "title": "Debt Management Solution (Lagos State Government)",
+                    "description": "A bespoke solution to capture facility information of local or foreign loans, manage the debt portfolios, plan Repayments Obligations and monitor Trends.",
+                    "role": "Developer",
+                    "teamSize": 6,
+                    "technologies" : [
+                        "C#",
+                        ".Net 3.5 Framework",
+                        "XML",
+                        "SOAP",
+                        "HTML5",
+                        "CSS3",
+                        "MSSQL",
+                        "Javascript",
+                        "JQuery"
+                    ]
+                }
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school": "University of Lagos",
+            "startYear": "2007",
+            "endYear": "2012",
+            "degree": "B.Sc Computer Engineering",
+            "grade": "3.46/5"
+        }
+    ],
+    "volunteer_experience": [
+        {
+            "organisation": "Young Girls in Engineering (Initiative of US Consulate, Nigeria)",
+            "role": "Project Application Developer",
+            "cause": "Education",
+            "description": "In reaching out to girls in primary and secondary schools, medium scale tutoring and quiz software were developed."
+        },
+        {
+            "organisation": "Nigeria Youth Corps Fellowship (Lagos Branch)",
+            "role": "Program Manager",
+            "cause": "Social Services",
+            "description": "Deployed humanitarian aid and skills empowerment to remote and rural parts of Lagos state"
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "proficiencyLevel": "Highly proficient"
+        }
+    ]
+    
+}

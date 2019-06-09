@@ -1,0 +1,14 @@
+.idea/
+.env
+.vscode
+.DS_STORE
+.DS_Store
+__pycache__
+venv
+.pytest_cache
+.pytest_cache/v/cache
+*.pyc
+.coverage*
+htmlcov
+.coverage*
+documentation/
