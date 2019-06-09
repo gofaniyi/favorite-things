@@ -50,7 +50,7 @@ class TestingConfig(Config):
     TESTING = True
     CELERY_ALWAYS_EAGER = True
     SQLALCHEMY_DATABASE_URI = getenv(
-        'TEST_DATABASE_URI', default='postgresql://localhost/insurance_test')
+        'TEST_DATABASE_URI', default='mysql+pymysql://localhost/britecore_test')
 
     JWT_SECRET_KEY='\x95T\xe2\x8f\x8a\xa1a\xb0\x8d\x01\xd3\xea\x93X\xfb\x91ik\x9d\x96f\x83\xae\xab'
     FLASK_ENV = 'testing'
