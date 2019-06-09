@@ -64,7 +64,8 @@ def validate_category_exist(value):
     category = Category.get(value)
     raise_error('NOT_FOUND_IDENTIFIER', 'category', fields=['categoryId']) if not category else None
 
-def validate(model, error_key, obj, status_code, **kwargs):
+def validate(model, *args, **kwargs):
+    error_key, obj, status_code = args
     instance = model.filter(**kwargs).first()
     if instance:
         raise ValidationError(

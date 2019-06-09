@@ -105,6 +105,29 @@ class TestCategoryResource:
         assert data['errors']['name'] == ['Missing data for required field.']
 
 
+    def test_create_category_with_empty_name_fails(
+            self, client, init_db):
+        """
+        Parameters:
+            client(FlaskClient): fixture to get flask test client
+            init_db(SQLAlchemy): fixture to initialize the test database
+        """
+
+        payload = {
+            'name' : ''
+        }
+
+        response = client.post(
+            f'{BASE_URL}/categories', 
+            data=json.dumps(payload),
+            content_type='application/json')
+
+        data = json.loads(response.data.decode())
+        assert response.status_code == 400
+        assert data['status'] == 'error'
+        assert data['message'] == ERROR_MESSAGES['NOT_FOUND'].format('Name')
+
+
     def test_get_all_favorites_under_a_category_succeeds(
             self, client, init_db, category_with_favorites):
         """
