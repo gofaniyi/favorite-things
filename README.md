@@ -234,7 +234,6 @@ My project uses Travis CI and deploys to AWS Lambda after CI passes.
 
     ```
     zappa update dev
-
     ```
 
     Ensure you remove the `profile_name` key from the `zappa_settings.json` file before pushing 
