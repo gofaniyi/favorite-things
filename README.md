@@ -4,35 +4,33 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7513939bf4da89be4919/test_coverage)](https://codeclimate.com/github/gofaniyi/favorite-things/test_coverage)
 [![Build Status](https://travis-ci.org/gofaniyi/favorite-things.svg?branch=master)](https://travis-ci.org/azu/travis-badge)
 
-An assessement to solve the problems of managing different forms of Insurance
-
-## Problem statement and Objective
-
-Create a simple solution to solve for the rigid system around creating different Insurance risks for 
-different customers in different industries.
-
 
 ## Description
 
-The **insurance-app** is the backbone of an application for managing different forms of Insurance risks assets for BriteCore customers. The project is divided into two parts. The Frontend build on **VueJs - Javascript** and the Backend built on **Flask - Python**.
+The **favorite-things-app** is an application that allows the user to track their favorite things. The project is divided into two parts. The Frontend build on **VueJs - Javascript** and the Backend built on **Flask - Python**.
 
 
 - Key Application features
 
-1. Risk Type Management
-2. Creation of Risks
-3. User Authentication
-4. User Registration
+2. Favorite Management
+    - Creation of Favorites
+    - Updating different Favorites
+    - Removing different Favorites from the system
+    - Viewing all Favorites and those under a particular category
 
+2. Category Management
+    - Creation of Categories
+    - Updating different Categories
+    - Removing different Categories from the system
 
 - FrontEnd
 
-The FrontEnd is a VueJs application that I am serving as static pages through the Flask application. Due to the size of the frontend, it is hosted in a [separate repository](https://github.com/gofaniyi/insurance-web). Only the static files are hosted in this repository. See [static files](https://github.com/gofaniyi/insurance-app/tree/master/dist)
+The FrontEnd is a VueJs application that I am serving as static pages through the Flask application. Due to the size of the frontend, it is hosted in a [separate repository](https://github.com/gofaniyi/favorite-things-web). Only the static files are hosted in this repository. See [static files](https://github.com/gofaniyi/favorite-things/tree/master/dist)
 
 
 - BackEnd
 
-The api built on Flask Rest API Framework, provides features for registering different forms of Insurance risks. This bothers around being able to set up risk-types with dynamic/custom attributes.
+The api built on Flask Rest API Framework, provides resources, i.e. Collection of endpoints to track a user's favorite things.
 
 ## Development Approach
 
@@ -41,11 +39,11 @@ the custom attributes that will be defined when creating these risks.
 
 - Database Setup & Entity Relationship
 The following tables were designed to manage the concept of these solution.
-1. Companies
-2. Users
-3. RiskTypes
-4. Attribute
-5. Risks
+
+1. Categories
+2. Favorites
+3. Audit logs
+
 The relationship between these tables is explained in the entity relation diagram below
 
 * Entity Relationship Diagram
@@ -53,24 +51,7 @@ The relationship between these tables is explained in the entity relation diagra
 ![alt text](https://image.prntscr.com/image/sl4JJUqvRc21vlvPdrHHHg.png)
 
 
-* Here is a link [ORM Classes](https://github.com/gofaniyi/insurance-app/tree/master/api/models) to the folder that contains the ORM classes for these tables. 
-
-
-## Other aspects of development
-
-- Authentication: 
-The authentication workflow works as follows:
-
-1. Client provides email and password, which is sent to the server
-2. Server then verifies that email and password are correct and responds with an auth token
-3. Client stores the token and sends it along with all subsequent requests to the API
-4. Server decodes the token and validates it
-5. This cycle repeats until the token expires or is revoked. In the latter case, the server issues a new token.
-
-- User Administration & Account Management
-
-Seeing that different customers will have their accounts provisioned and manage their Risk Types differently. I have also designed the application to manage the Signing up of Users. Although companies are seeded into the database and you
-can make your selection while creating your user account.
+* Here is a link [ORM Classes](https://github.com/gofaniyi/favorite-things/tree/master/api/models.py) to the folder that contains the ORM classes for these tables. 
 
 
 ## Technology Stack - BackEnd
@@ -81,7 +62,8 @@ can make your selection while creating your user account.
 - Marshmallow
 - JSON Web Token
 - Pytest
-
+- Flask S3
+- MySQL
 
 ###  Setting Up For Local Development
 
@@ -113,19 +95,13 @@ can make your selection while creating your user account.
 -   Clone the insurance-app repo and cd into it:
 
     ```
-    git clone https://github.com/insurance-app.git
+    git clone https://github.com/favorite-things.git
     ```
 
--   Install dependencies:
+-   Install dependencies from requirements.txt file:
 
     ```
-    pipenv install
-    ```
-
--   Install dev dependencies to setup development environment:
-
-    ```
-    pipenv install --dev
+    pip install -r requirements.txt
     ```
 
 -   Make a copy of the .env.sample file and rename it to .env and update the variables accordingly:
@@ -134,7 +110,7 @@ can make your selection while creating your user account.
     FLASK_ENV=development # Takes either development, testing, staging or production
     API_BASE_URL_V1=/api/v1 # The base url for version 1 of the API
     FLASK_APP=manage.py
-    DATABASE_URI = "postgresql://YOUR_DB_USER:YOUR_DB_PASSWORD@YOUR_HOST/YOUR_DATABASE_NAME" #Development and production postgres db uri
+    DATABASE_URI = "mysql+pymysql://YOUR_DB_USER:YOUR_DB_PASSWORD@YOUR_HOST/YOUR_DATABASE_NAME" #Development and production postgres db uri
     TEST_DATABASE_URI = "postgresql://YOUR_DB_USER:YOUR_DB_PASSWORD@YOUR_HOST/YOUR_TEST_DATABASE_NAME"
     JWT_SECRET_KEY="" # Generate your secret key. You can use this code snippet below to generate it
     ```

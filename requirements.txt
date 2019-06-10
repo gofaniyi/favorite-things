@@ -18,7 +18,6 @@ durationpy==0.5
 Faker==1.0.4
 Flask==1.0.2
 Flask-Cors==3.0.7
-Flask-JSGlue==0.3.1
 Flask-Migrate==2.4.0
 flask-restplus==0.12.1
 Flask-S3==0.3.3

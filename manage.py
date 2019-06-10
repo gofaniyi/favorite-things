@@ -42,55 +42,9 @@ def seed():
     print('Seeding data')
 
     categories_data = [
-        {'name' : 'Food', 'favorites' : [
-            {
-                'title' : 'Rice',
-                'description' : 'This is a local food for us all to eat',
-                'ranking': 1,
-                'meta_data' : {
-                    'origin' : 'Lagos',
-                    'quantity' : 20
-                }
-            },
-            {
-                'title' : 'Beans',
-                'description' : 'This is a internation food for us all to eat',
-                'ranking': 2,
-                'meta_data' : {
-                    'origin' : 'Abuja',
-                    'quantity' : 2
-                }
-            },
-        ]},
-        {'name' : 'Dress', 'favorites' : [
-            {
-                'title' : 'Nike',
-                'description' : 'This is a designers clothes',
-                'ranking': 1,
-                'meta_data' : {
-                    'origin' : 'New York',
-                    'quantity' : 2
-                }
-            },
-            {
-                'title' : 'Dolce',
-                'description' : 'This is a brand for all',
-                'ranking': 2,
-                'meta_data' : {
-                    'origin' : 'Los Angeles',
-                    'quantity' : 4
-                }
-            },
-            {
-                'title' : 'Fardd',
-                'description' : 'This is a brand for single people',
-                'ranking': 3,
-                'meta_data' : {
-                    'origin' : 'Malawi',
-                    'quantity' : 40
-                }
-            },
-        ]}
+        {'name' : 'Person', 'favorites' : []},
+        {'name' : 'Place', 'favorites' : []},
+        {'name' : 'Food', 'favorites' : []}
     ]
 
     for category_data in categories_data:

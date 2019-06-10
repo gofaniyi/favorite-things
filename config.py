@@ -36,7 +36,7 @@ class ProductionConfig(Config):
 
 class DevelopmentConfig(Config):
     """App development configuration."""
-    DEBUG = False
+    DEBUG = True
 
 
 class StagingConfig(Config):

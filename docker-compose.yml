@@ -1,0 +1,14 @@
+version: '2.1'
+services:
+  britecore:
+    restart: always
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+    ports:
+      - '5000:5000'
+    volumes:
+      - .:/britecore-app
+    entrypoint: ["/bin/bash","-c","/britecore-app/docker/start_api.sh"]
+    stdin_open: true
+    tty: true
