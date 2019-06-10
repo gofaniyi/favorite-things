@@ -28,5 +28,5 @@ script:
 after_success:
   - /tmp/cc-test-reporter upload-coverage -i tmp/cc.testreport.json
 
-# after_script:
-#   - zappa update dev
+after_script:
+  - zappa update dev

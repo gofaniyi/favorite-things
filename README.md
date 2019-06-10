@@ -1,4 +1,4 @@
-## Insurance APP
+## Favorite Things App
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/7513939bf4da89be4919/maintainability)](https://codeclimate.com/github/gofaniyi/favorite-things/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7513939bf4da89be4919/test_coverage)](https://codeclimate.com/github/gofaniyi/favorite-things/test_coverage)
@@ -110,8 +110,8 @@ The relationship between these tables is explained in the entity relation diagra
     FLASK_ENV=development # Takes either development, testing, staging or production
     API_BASE_URL_V1=/api/v1 # The base url for version 1 of the API
     FLASK_APP=manage.py
-    DATABASE_URI = "mysql+pymysql://YOUR_DB_USER:YOUR_DB_PASSWORD@YOUR_HOST/YOUR_DATABASE_NAME" #Development and production postgres db uri
-    TEST_DATABASE_URI = "postgresql://YOUR_DB_USER:YOUR_DB_PASSWORD@YOUR_HOST/YOUR_TEST_DATABASE_NAME"
+    DATABASE_URI = "mysql+pymysql://YOUR_DB_USER:YOUR_DB_PASSWORD@YOUR_HOST/YOUR_DATABASE_NAME" #Development and production db uri
+    TEST_DATABASE_URI = "mysql+pymysql://YOUR_DB_USER:YOUR_DB_PASSWORD@YOUR_HOST/YOUR_TEST_DATABASE_NAME"
     JWT_SECRET_KEY="" # Generate your secret key. You can use this code snippet below to generate it
     ```
 
@@ -242,7 +242,7 @@ To stop the running containers run the command `docker-compose down` or `make st
 
 - Here is a link to the deployed version of the project: 
 
-https://26o7em6e31.execute-api.us-east-2.amazonaws.com/dev
+https://skudz1hazf.execute-api.us-east-2.amazonaws.com/dev
 
 * Landing Page
 
@@ -260,16 +260,10 @@ Find below a guide on how to use the app.
 5. [Create Risks under a Risk Type](https://github.com/gofaniyi/insurance-app/blob/master/documentation/create_risks.md)
 6. [View Risks under a Risk Type](https://github.com/gofaniyi/insurance-app/blob/master/documentation/view_risks.md)
 
-## Login Credentials:
-
-* email: example@sample.com
-* password: example1234
-
 
 ## Other deliverables
 
-1. Link to the debugging quiz is [here](https://github.com/gofaniyi/insurance-app/blob/master/quiz.py)
-
+1. Link to the debugging quiz is [here](https://github.com/gofaniyi/favorite-things/blob/master/quiz.py)
 
 
 I hope you find my concept of solving this problem helpful. :)
