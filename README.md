@@ -25,7 +25,7 @@ The **favorite-things-app** is an application that allows the user to track thei
 
 - FrontEnd
 
-The FrontEnd is a VueJs application that I am serving as static pages through the Flask application. Due to the size of the frontend, it is hosted in a [separate repository](https://github.com/gofaniyi/favorite-things-web). Only the static files are hosted in this repository. See [static files](https://github.com/gofaniyi/favorite-things/tree/master/dist)
+The FrontEnd is a VueJs application that I am serving as static pages through the Flask application. Due to the size of the frontend, it is hosted in a [separate repository](https://github.com/gofaniyi/favorite-things-vuejs-app). Only the static files are hosted in this repository. See [static files](https://github.com/gofaniyi/favorite-things/tree/master/dist)
 
 
 - BackEnd
@@ -48,7 +48,7 @@ The relationship between these tables is explained in the entity relation diagra
 
 * Entity Relationship Diagram
 
-![alt text](https://image.prntscr.com/image/sl4JJUqvRc21vlvPdrHHHg.png)
+![alt text](https://image.prntscr.com/image/m4h9VDVYQBiClotQcuSEUw.png)
 
 
 * Here is a link [ORM Classes](https://github.com/gofaniyi/favorite-things/tree/master/api/models.py) to the folder that contains the ORM classes for these tables. 
@@ -246,19 +246,19 @@ https://skudz1hazf.execute-api.us-east-2.amazonaws.com/dev
 
 * Landing Page
 
-![alt text](https://image.prntscr.com/image/8BHnRsncR8yIqRRLV1z6bQ.png)
+![alt text](https://image.prntscr.com/image/K5eQsRREQU_27aJ4WVPh-Q.png)
 
 
 ## Demo
 
 Find below a guide on how to use the app.
-1. [User Authentication](https://github.com/gofaniyi/insurance-app/blob/master/documentation/user_authentication.md)
-2. [Create Risk Types](https://github.com/gofaniyi/insurance-app/blob/master/documentation/create_risk_types.md)
-3. [View Risk Types](https://github.com/gofaniyi/insurance-app/blob/master/documentation/view_risk_types.md)
-3. [Edit Risk Types](https://github.com/gofaniyi/insurance-app/blob/master/documentation/edit_risk_types.md)
-4. [Delete Risk Types](https://github.com/gofaniyi/insurance-app/blob/master/documentation/delete_risk_types.md)
-5. [Create Risks under a Risk Type](https://github.com/gofaniyi/insurance-app/blob/master/documentation/create_risks.md)
-6. [View Risks under a Risk Type](https://github.com/gofaniyi/insurance-app/blob/master/documentation/view_risks.md)
+1. [Create Categories](https://github.com/gofaniyi/favorite-things/blob/master/documentation/create_categories.md)
+2. [View all Categories](https://github.com/gofaniyi/favorite-things/blob/master/documentation/view_categories.md)
+3. [Edit Categories](https://github.com/gofaniyi/favorite-things/blob/master/documentation/edit_categories.md)
+4. [Delete Categories](https://github.com/gofaniyi/favorite-things/blob/master/documentation/delete_categories.md)
+5. [Create Favorites](https://github.com/gofaniyi/favorite-things/blob/master/documentation/create_favorites.md)
+6. [View all Favorites](https://github.com/gofaniyi/favorite-things/blob/master/documentation/view_favorites.md)
+7. [View Favorites under a Category](https://github.com/gofaniyi/favorite-things/blob/master/documentation/view_category_favorites.md)
 
 
 ## Other deliverables

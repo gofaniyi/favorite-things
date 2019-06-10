@@ -22,6 +22,9 @@
 
         Seeing that different users will have their accounts provisioned and manage their Favorites differently. I will also design the application to manage the Signing up of Users.
 
+    - Manage Attributes under each category
+
+        Currently, the user specifies the extra attributes when creating a favorite thing. But managing it under each category will create room for consistency across favorite things.
 
 ## Most Useful feature in Python3.6/Flask latest version
 
