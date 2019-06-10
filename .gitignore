@@ -11,5 +11,4 @@ venv
 .coverage*
 htmlcov
 .coverage*
-documentation/
 dist_local/
