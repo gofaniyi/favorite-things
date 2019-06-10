@@ -632,3 +632,45 @@ class TestSingleFavoriteResource:
         assert response.status_code == 404
         assert data['status'] == 'error'
         assert data['message'] == ERROR_MESSAGES['NOT_FOUND'].format('Favorite')
+
+
+class TestAuditCategoryResource:
+
+    def test_get_all_categories_audits_succeeds(
+            self, client, init_db, categories_audits):
+        """
+        Parameters:
+            client(FlaskClient): fixture to get flask test client
+            init_db(SQLAlchemy): fixture to initialize the test database
+            categories_audits (Audit): Fixture to create new categories' audits
+        """
+
+        response = client.get(
+            f'{BASE_URL}/categories/audits')
+            
+        data = json.loads(response.data.decode())
+        assert response.status_code == 200
+        assert data['status'] == 'success'
+        assert data['message'] == SUCCESS_MESSAGES['FETCHED'].format('Audits')
+        assert len(data['data']) > 0
+
+
+class TestAuditFavoriteResource:
+
+    def test_get_all_favorites_audits_succeeds(
+            self, client, init_db, favorites_audits):
+        """
+        Parameters:
+            client(FlaskClient): fixture to get flask test client
+            init_db(SQLAlchemy): fixture to initialize the test database
+            favorites_audits (Audit): Fixture to create new favorites' audits
+        """
+
+        response = client.get(
+            f'{BASE_URL}/favorites/audits')
+            
+        data = json.loads(response.data.decode())
+        assert response.status_code == 200
+        assert data['status'] == 'success'
+        assert data['message'] == SUCCESS_MESSAGES['FETCHED'].format('Audits')
+        assert len(data['data']) > 0

@@ -154,3 +154,12 @@ class FavoriteSchema(BaseSchema):
         ],
         dump_only=True,
         dump_to="category")
+
+
+class AuditSchema(BaseSchema):
+    """ Audit model schema. """
+
+    resource_id = fields.Integer(dump_only=True)
+    resource_type = fields.String(dump_only=True)
+    action = fields.String(dump_only=True)
+    activity = fields.String(dump_only=True)

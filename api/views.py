@@ -6,8 +6,8 @@ from flask import request, jsonify
 # Middlewares
 from main import api
 # Models
-from .models import Category, Favorite
-from .schemas import CategorySchema, FavoriteSchema
+from .models import Category, Favorite, Audit
+from .schemas import CategorySchema, FavoriteSchema, AuditSchema
 
 from .messages import SUCCESS_MESSAGES
 
@@ -53,6 +53,29 @@ class CategoryResource(Resource):
             'message': SUCCESS_MESSAGES['CREATED'].format('Category'),
             'data' : category_schema.dump(category).data
         }, 201
+
+
+@api.route('/categories/audits')
+class AuditCategoryResource(Resource):
+    """Resource class for category"""
+
+    def get(self):
+        """
+        Gets audits list for all categories
+        """
+
+        audits = Audit.filter(resource_type='CATEGORY')
+
+        audit_schema = AuditSchema(many=True)
+
+        return (
+            {
+                "data": audit_schema.dump(audits).data,
+                "message": SUCCESS_MESSAGES["FETCHED"].format("Audits"),
+                "status": "success",
+            },
+            200,
+        )
 
 @api.route('/categories/<int:category_id>')
 class SingleFavoriteResource(Resource):
@@ -167,6 +190,29 @@ class FavoriteResource(Resource):
             {
                 "data": favorite_schema.dump(favorites).data,
                 "message": SUCCESS_MESSAGES["FETCHED"].format("Favorites"),
+                "status": "success",
+            },
+            200,
+        )
+
+
+@api.route('/favorites/audits')
+class AuditCategoryResource(Resource):
+    """Resource class for category"""
+
+    def get(self):
+        """
+        Gets audits list for all favorites
+        """
+        
+        audits = Audit.filter(resource_type='FAVORITE')
+
+        audit_schema = AuditSchema(many=True)
+
+        return (
+            {
+                "data": audit_schema.dump(audits).data,
+                "message": SUCCESS_MESSAGES["FETCHED"].format("Audits"),
                 "status": "success",
             },
             200,

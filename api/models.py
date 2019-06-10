@@ -127,6 +127,21 @@ class Category(BaseModel):
         return f'<Category: {self.name}>'
 
 
+    def save(self):
+        """
+        """
+        instance = super(Category, self).save()
+        Audit.log_save(instance, 'category',  f'New category with name {instance.name} was added')
+        return instance
+
+    def update(self, **kwargs):
+        """
+        """
+        instance = super(Category, self).update(**kwargs)
+        Audit.log_update(instance, 'category', f'Category with id {instance.id} was updated with new changes')
+        return instance
+
+
     def delete(self):
         """ Delete a Category """
         
@@ -136,14 +151,16 @@ class Category(BaseModel):
                 'message': ERROR_MESSAGES['DELETING_RELATED_OBJECTS'].format('Category', 'Favorites'),
             }, 400)
             
-        return super(Category, self).delete()
+        status = super(Category, self).delete()
+        Audit.log_delete(self, 'category', f'Category with name {self.name} was removed')
+        return status
 
 
 class Audit(BaseModel):
     """ Model for audit logs.
         Tracks all changes on different resources.
     """
-    resource_id = db.Column(db.String(60), index=True, nullable=False)
+    resource_id = db.Column(db.Integer, index=True, nullable=False)
     resource_type = db.Column(db.String(60), index=True, nullable=False)
     action = db.Column(db.String(60), index=True, nullable=False)
     activity = db.Column(db.Text(), nullable=False)
@@ -158,6 +175,32 @@ class Audit(BaseModel):
 
     def __repr__(self):
         return f'<Audit on {self.resource_type}>'
+
+
+    @staticmethod
+    def log_save(instance, resource_type, activity):
+        return Audit.log('ADDED', instance, resource_type, activity)
+    
+    @staticmethod
+    def log_update(instance, resource_type, activity):
+        return Audit.log('UPDATED', instance, resource_type, activity)
+
+    @staticmethod
+    def log_delete(instance, resource_type, activity):
+        return Audit.log('REMOVED', instance, resource_type, activity)
+    
+    @classmethod
+    def log(cls, *args):
+        action, instance, resource_type, activity = args
+        params = {
+            'resource_id' : instance.id,
+            'resource_type' : resource_type.upper(),
+            'activity' : activity,
+            'action': action
+        }
+        audit = cls(**params)
+        return audit.save()
+    
 
 
 class Favorite(BaseModel):
@@ -183,6 +226,7 @@ class Favorite(BaseModel):
         """
         instance = super(Favorite, self).save()
         Favorite.reorder_ranks(instance.id, instance.category_id)
+        Audit.log_save(instance, 'favorite',  f'New favorite with title {instance.title} was added')
         return instance
 
     def update(self, **kwargs):
@@ -190,6 +234,7 @@ class Favorite(BaseModel):
         """
         instance = super(Favorite, self).update(**kwargs)
         Favorite.reorder_ranks(instance.id, instance.category_id)
+        Audit.log_update(instance, 'favorite', f'Favorite with id {instance.id} was updated with new changes')
         return instance
 
     
@@ -198,6 +243,7 @@ class Favorite(BaseModel):
         """
         status = super(Favorite, self).delete()
         Favorite.reorder_ranks(None, self.category_id)
+        Audit.log_delete(self, 'favorite', f'Favorite with title {self.title} was removed')
         return status
 
     @staticmethod
