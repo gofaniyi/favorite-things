@@ -10,3 +10,4 @@ When a user account creates different categories
 All actions (Created, Edit and Delete) that happens on a category is logged by the system, and you
 can view that by clicking on the `View Audit Logs` button
 
+[![Image from Gyazo](https://i.gyazo.com/f8c833bc71a55305d293f8b1acd3f795.gif)](https://gyazo.com/f8c833bc71a55305d293f8b1acd3f795)
