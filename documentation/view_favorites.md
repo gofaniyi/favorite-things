@@ -8,7 +8,7 @@ You can view the list of favorites for all categories
 
 You can click on any category to view the list of favorites under such risk type
 
-![edit_risk_type.gif](https://s3.gifyu.com/images/edit_risk_type.gif)
+[![Image from Gyazo](https://i.gyazo.com/62614998020cfd0e4ae5cd4b5d9ee81c.gif)](https://gyazo.com/62614998020cfd0e4ae5cd4b5d9ee81c)
 
 
 ## View Audit Logs for all Categories
