@@ -60,7 +60,6 @@ The relationship between these tables is explained in the entity relation diagra
 - Flask RestPlus
 - SQLAlchemy
 - Marshmallow
-- JSON Web Token
 - Pytest
 - Flask S3
 - MySQL
