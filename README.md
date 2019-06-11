@@ -2,8 +2,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/7513939bf4da89be4919/maintainability)](https://codeclimate.com/github/gofaniyi/favorite-things/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7513939bf4da89be4919/test_coverage)](https://codeclimate.com/github/gofaniyi/favorite-things/test_coverage)
-[![Build Status](https://travis-ci.org/gofaniyi/favorite-things.svg?branch=master)](https://travis-ci.org/azu/travis-badge)
-
+[![Build Status](https://travis-ci.org/gofaniyi/favorite-things.svg?branch=master)](https://travis-ci.org/gofaniyi/favorite-things)
 
 ## Description
 
