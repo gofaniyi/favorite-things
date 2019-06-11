@@ -1,12 +1,13 @@
 ## Deliverables Timeline
 
 1.  How long did you spend on the coding test below?
+    
     I spent 22hours on the coding test. Here is breakdown of the time management from Thursday.
-    Thursday - 4hours
-    Friday - 6hours
-    Saturday - 4hours
-    Sunday - 4hours
-    Monday - 4hours
+    - Thursday - 4hours
+    - Friday - 6hours
+    - Saturday - 4hours
+    - Sunday - 4hours
+    - Monday - 4hours
 
 2.  What would you add to your solution if you had more time?
     
