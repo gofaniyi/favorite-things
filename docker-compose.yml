@@ -9,6 +9,8 @@ services:
       - '5000:5000'
     volumes:
       - .:/britecore-app
+    environment:
+      DATABASE_URI: mysql+pymysql://root:root@localhost:8889/britecore
     entrypoint: ["/bin/bash","-c","/britecore-app/docker/start_api.sh"]
     stdin_open: true
     tty: true
