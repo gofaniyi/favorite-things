@@ -84,12 +84,6 @@ The relationship between these tables is explained in the entity relation diagra
     pipenv --version
     >> pipenv, version 2018.10.13
     ```
--   Check that postgres is installed:
-
-    ```
-    postgres --version
-    >> postgres (PostgreSQL) 10.1
-    ```
 
 -   Clone the insurance-app repo and cd into it:
 
