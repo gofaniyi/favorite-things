@@ -255,8 +255,8 @@ Find below a guide on how to use the app.
 
 ## Other deliverables
 
-1. Link to the description of myself is [here](https://github.com/gofaniyi/favorite-things/blob/master/myself.json)
-2. Link to the answers to the remaining technical questions is [here](https://github.com/gofaniyi/favorite-things/blob/master/answers.md)
+1. Link to the description of myself is [myself.json](https://github.com/gofaniyi/favorite-things/blob/master/myself.json)
+2. Link to the answers to the remaining technical questions is [answers.md](https://github.com/gofaniyi/favorite-things/blob/master/answers.md)
 3. Link to the debugging quiz is [here](https://github.com/gofaniyi/favorite-things/blob/master/quiz.py)
 
 
