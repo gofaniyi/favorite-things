@@ -1,5 +1,5 @@
 {
-    "personal_details": {
+    "personalDetails": {
         "firstName": "Olaoluwa",
         "lastName": "Faniyi",
         "middleName": "Gideon",
@@ -17,14 +17,14 @@
             "Contribute immensenly to open source community"
         ]
     },
-    "work_history": [
+    "workHistory": [
         {
             "jobTitle": "Technical Team Lead",
             "employer": "Andela",
             "startDate": "October, 2018",
             "endDate": null,
             "isCurrent": true,
-            "projects/achievements": [
+            "projects": [
                 {
                     "title": "Asset Management APIs",
                     "description": "This project was built with Python/Flask and its deployed to serve the company's centers around the world.",
@@ -224,7 +224,7 @@
             "grade": "3.46/5"
         }
     ],
-    "volunteer_experience": [
+    "volunteerExperience": [
         {
             "organisation": "Young Girls in Engineering (Initiative of US Consulate, Nigeria)",
             "role": "Project Application Developer",
