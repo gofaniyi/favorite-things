@@ -40,7 +40,7 @@ more-itertools==7.0.0
 placebo==0.9.0
 pluggy==0.12.0
 psycopg2==2.8.2
-py==1.8.0
+py==1.10.0
 pycparser==2.19
 PyJWT==1.7.1
 PyMySQL==0.9.3
